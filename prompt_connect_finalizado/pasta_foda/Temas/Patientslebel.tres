@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=4 format=2]
+
+[ext_resource path="res://Fontes/Poppins-SemiBold.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=111]
+size = 28
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=112]
+
+[resource]
+Label/colors/font_color = Color( 0.705882, 0.0431373, 0.0431373, 1 )
+Label/fonts/font = SubResource( 111 )
+Label/styles/normal = SubResource( 112 )

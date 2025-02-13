@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=8 format=2]
+
+[ext_resource path="res://addons/GDSerCommDock/Fontes/Poppins-SemiBold.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=35]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxFlat" id=40]
+bg_color = Color( 0.172549, 0.172549, 0.172549, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id=36]
+bg_color = Color( 0.172549, 0.172549, 0.172549, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id=41]
+bg_color = Color( 0.172549, 0.172549, 0.172549, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[resource]
+Button/colors/font_color_hover = Color( 0, 0.619608, 1, 1 )
+Button/colors/font_color_pressed = Color( 0, 0.304963, 0.492188, 1 )
+Button/fonts/font = SubResource( 35 )
+Button/styles/disabled = SubResource( 2 )
+Button/styles/focus = SubResource( 3 )
+Button/styles/hover = SubResource( 40 )
+Button/styles/normal = SubResource( 36 )
+Button/styles/pressed = SubResource( 41 )

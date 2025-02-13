@@ -1,0 +1,269 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Temas/Lineeditf.tres" type="Theme" id=1]
+[ext_resource path="res://Fontes/Poppins-SemiBold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Temas/Labels.tres" type="Theme" id=4]
+[ext_resource path="res://Temas/LateralB.tres" type="Theme" id=5]
+[ext_resource path="res://Imagens/profile.png" type="Texture" id=6]
+[ext_resource path="res://Imagens/Background.png" type="Texture" id=7]
+
+[sub_resource type="GDScript" id=55]
+script/source = "extends Control
+
+func _process(delta: float) -> void:
+	var _lineEdit = $LineEditSala as LineEdit;
+	var _labelEnterToConfirm = $LabelGer2;
+	
+	# Exibir label apenas se o texto tiver sendo editado.
+	_labelEnterToConfirm.visible = _lineEdit.has_focus()
+	
+	# Alterar cor do confirmado.
+	var _g = 0.80 + sin(Time.get_ticks_msec() / 369.0) * 0.20;
+	$LabelGer6.modulate = Color(0.0, _g, 33.0, 1.0);
+	$LabelGer3.modulate = Color(0.0, _g, 33.0, 1.0);
+
+func _on_LineEditNome_text_changed(new_text):
+	# Atualiza o nome sempre que o texto mudar na LineEdit do nome
+	Global.nome = new_text
+
+func _on_LineEditSala_text_entered(new_text):
+	# Armazena o texto inserido na variável sala quando a tecla Enter é pressionada na LineEdit da sala
+	Global.sala = new_text
+	print(\"Nome inserido:\", Global.nome)
+	print(\"Sala inserida:\", Global.sala)
+	
+	# Tirar o foco da caixa de texto.
+	$LineEditSala.release_focus();
+	
+	# Alterar e exibir texto de confirmação.
+	var _text = Global.nome + \" confirmado na sala \" + Global.sala;
+	$LabelGer3.text = _text;
+	$LabelGer3.visible = true;
+	
+	yield(get_tree().create_timer(2), \"timeout\");
+	
+	$LabelGer3.visible = false;
+	
+func _on_ButtonUsers_pressed() -> void:
+	TransitionScreen.fade_in(\"res://addons/GDSerCommDock/Cenas/Pacientes.tscn\")
+
+func _on_ButtonAdd_pressed():
+	TransitionScreen.fade_in(\"res://addons/GDSerCommDock/Cenas/Add.tscn\")
+
+func _on_ButtonEdit_pressed():
+	TransitionScreen.fade_in(\"res://addons/GDSerCommDock/Cenas/Gerenciamento.tscn\")
+
+func _on_LineEditSala_text_changed(new_text: String) -> void:
+	pass # Replace with function body.
+
+func _input(event):
+	if event.is_action_pressed(\"ui_cancel\"):
+		TransitionScreen.fade_in(\"res://addons/GDSerCommDock/Cenas/Menu.tscn\")
+"
+
+[sub_resource type="DynamicFont" id=54]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=53]
+Label/fonts/font = SubResource( 54 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=2]
+Label/fonts/font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=51]
+size = 45
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=50]
+Label/colors/font_color = Color( 0.207843, 0.207843, 0.207843, 1 )
+Label/fonts/font = SubResource( 51 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 2.16003
+rect_pivot_offset = Vector2( -862, -47 )
+script = SubResource( 55 )
+
+[node name="FundoMenu" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+stretch_mode = 1
+
+[node name="LineEditNome" type="LineEdit" parent="."]
+margin_left = 400.0
+margin_top = 385.0
+margin_right = 1966.0
+margin_bottom = 539.0
+rect_scale = Vector2( 0.921104, 1.00623 )
+theme = ExtResource( 1 )
+placeholder_text = "Nome (Clique para Inserir)"
+
+[node name="LineEditSala" type="LineEdit" parent="."]
+margin_left = 401.0
+margin_top = 642.0
+margin_right = 1967.0
+margin_bottom = 796.0
+rect_scale = Vector2( 0.921104, 1.00623 )
+theme = ExtResource( 1 )
+placeholder_text = "Sala (Clique para Inserir)"
+caret_blink = true
+
+[node name="LabelGer" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -434.0
+margin_top = 165.0
+margin_right = 753.0
+margin_bottom = 305.0
+rect_pivot_offset = Vector2( 330, 70 )
+theme = ExtResource( 4 )
+text = "Adicionar um paciente:"
+align = 1
+
+[node name="LabelGer4" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 546.0
+margin_top = 39.0
+margin_right = 642.0
+margin_bottom = 110.0
+rect_pivot_offset = Vector2( 330, 70 )
+theme = SubResource( 53 )
+text = "Olá,"
+align = 1
+
+[node name="LabelGer6" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 653.0
+margin_top = 39.0
+margin_right = 826.0
+margin_bottom = 110.0
+rect_pivot_offset = Vector2( 330, 70 )
+theme = SubResource( 53 )
+text = "4Bytes"
+align = 1
+
+[node name="Com" type="Node" parent="."]
+
+[node name="LabelGer2" type="Label" parent="."]
+visible = false
+margin_left = 529.0
+margin_top = 811.0
+margin_right = 1519.0
+margin_bottom = 895.0
+theme = SubResource( 2 )
+text = "Pressione \"enter\" para confirmar"
+align = 1
+
+[node name="LabelGer3" type="Label" parent="."]
+visible = false
+margin_left = 347.0
+margin_top = 848.0
+margin_right = 1902.0
+margin_bottom = 932.0
+theme = SubResource( 2 )
+text = "Confirmado"
+align = 1
+
+[node name="LabelGer5" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -629.0
+margin_top = -73.0
+margin_right = -15.0
+margin_bottom = -9.0
+theme = SubResource( 50 )
+text = "Pressione \"esc\" para voltar"
+
+[node name="ButtonUsers" type="Button" parent="."]
+margin_left = 72.0
+margin_top = 416.0
+margin_right = 327.0
+margin_bottom = 472.0
+focus_mode = 0
+theme = ExtResource( 5 )
+enabled_focus_mode = 0
+text = "Pacientes"
+align = 0
+
+[node name="ButtonEdit" type="Button" parent="."]
+margin_left = 72.0
+margin_top = 521.0
+margin_right = 329.0
+margin_bottom = 577.0
+focus_mode = 0
+theme = ExtResource( 5 )
+enabled_focus_mode = 0
+text = "Editar"
+align = 0
+
+[node name="ButtonAdd" type="Button" parent="."]
+margin_left = 69.0
+margin_top = 309.0
+margin_right = 324.0
+margin_bottom = 365.0
+focus_mode = 0
+theme = ExtResource( 5 )
+enabled_focus_mode = 0
+text = "Adicionar"
+align = 0
+
+[node name="ButtonEdit2" type="Button" parent="."]
+margin_left = 72.0
+margin_top = 714.0
+margin_right = 329.0
+margin_bottom = 770.0
+focus_mode = 0
+theme = ExtResource( 5 )
+enabled_focus_mode = 0
+text = "Usuário"
+align = 0
+
+[node name="ButtonEdit3" type="Button" parent="."]
+margin_left = 70.0
+margin_top = 815.0
+margin_right = 327.0
+margin_bottom = 871.0
+focus_mode = 0
+theme = ExtResource( 5 )
+enabled_focus_mode = 0
+text = "Ajustes"
+align = 0
+
+[node name="ButtonEdit4" type="Button" parent="."]
+margin_left = 68.0
+margin_top = 986.0
+margin_right = 325.0
+margin_bottom = 1042.0
+focus_mode = 0
+theme = ExtResource( 5 )
+enabled_focus_mode = 0
+text = "F.A.Q "
+align = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -122.0
+margin_top = 29.0
+margin_right = -29.0
+margin_bottom = 143.0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[connection signal="text_changed" from="LineEditNome" to="." method="_on_LineEditNome_text_changed"]
+[connection signal="text_entered" from="LineEditSala" to="." method="_on_LineEditSala_text_entered"]
+[connection signal="pressed" from="ButtonUsers" to="." method="_on_ButtonUsers_pressed"]
+[connection signal="pressed" from="ButtonEdit" to="." method="_on_ButtonEdit_pressed"]
+[connection signal="pressed" from="ButtonAdd" to="." method="_on_ButtonAdd_pressed"]

@@ -1,0 +1,533 @@
+[gd_scene load_steps=70 format=2]
+
+[ext_resource path="res://Fontes/Poppins-SemiBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/ScriptPacientes.gd" type="Script" id=2]
+[ext_resource path="res://Temas/buttonkk.tres" type="Theme" id=3]
+[ext_resource path="res://Temas/Lineeditfnova.tres" type="Theme" id=4]
+[ext_resource path="res://Temas/Patientslebel.tres" type="Theme" id=5]
+[ext_resource path="res://Imagens/profile.png" type="Texture" id=6]
+[ext_resource path="res://Imagens/Background.png" type="Texture" id=7]
+[ext_resource path="res://Temas/labelkk.tres" type="Theme" id=8]
+
+[sub_resource type="DynamicFont" id=49]
+size = 45
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=50]
+Label/colors/font_color = Color( 0.207843, 0.207843, 0.207843, 1 )
+Label/fonts/font = SubResource( 49 )
+
+[sub_resource type="DynamicFont" id=51]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=52]
+Label/fonts/font = SubResource( 51 )
+
+[sub_resource type="DynamicFont" id=53]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=54]
+Label/fonts/font = SubResource( 53 )
+
+[sub_resource type="DynamicFont" id=72]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=73]
+
+[sub_resource type="StyleBoxEmpty" id=74]
+
+[sub_resource type="StyleBoxEmpty" id=75]
+
+[sub_resource type="StyleBoxEmpty" id=76]
+
+[sub_resource type="StyleBoxEmpty" id=77]
+
+[sub_resource type="Theme" id=85]
+Button/colors/font_color_hover = Color( 0, 0.619608, 1, 1 )
+Button/colors/font_color_pressed = Color( 0, 0.305882, 0.494118, 1 )
+Button/fonts/font = SubResource( 72 )
+Button/styles/disabled = SubResource( 73 )
+Button/styles/focus = SubResource( 74 )
+Button/styles/hover = SubResource( 75 )
+Button/styles/normal = SubResource( 76 )
+Button/styles/pressed = SubResource( 77 )
+
+[sub_resource type="DynamicFont" id=79]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=80]
+
+[sub_resource type="StyleBoxEmpty" id=81]
+
+[sub_resource type="StyleBoxEmpty" id=82]
+
+[sub_resource type="StyleBoxEmpty" id=83]
+
+[sub_resource type="StyleBoxEmpty" id=84]
+
+[sub_resource type="Theme" id=86]
+Button/colors/font_color_hover = Color( 0, 0.619608, 1, 1 )
+Button/colors/font_color_pressed = Color( 0, 0.305882, 0.494118, 1 )
+Button/fonts/font = SubResource( 79 )
+Button/styles/disabled = SubResource( 80 )
+Button/styles/focus = SubResource( 81 )
+Button/styles/hover = SubResource( 82 )
+Button/styles/normal = SubResource( 83 )
+Button/styles/pressed = SubResource( 84 )
+
+[sub_resource type="DynamicFont" id=65]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=66]
+
+[sub_resource type="StyleBoxEmpty" id=67]
+
+[sub_resource type="StyleBoxEmpty" id=68]
+
+[sub_resource type="StyleBoxEmpty" id=69]
+
+[sub_resource type="StyleBoxEmpty" id=70]
+
+[sub_resource type="Theme" id=87]
+Button/colors/font_color_hover = Color( 0, 0.619608, 1, 1 )
+Button/colors/font_color_pressed = Color( 0, 0.305882, 0.494118, 1 )
+Button/fonts/font = SubResource( 65 )
+Button/styles/disabled = SubResource( 66 )
+Button/styles/focus = SubResource( 67 )
+Button/styles/hover = SubResource( 68 )
+Button/styles/normal = SubResource( 69 )
+Button/styles/pressed = SubResource( 70 )
+
+[sub_resource type="DynamicFont" id=58]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=59]
+
+[sub_resource type="StyleBoxEmpty" id=60]
+
+[sub_resource type="StyleBoxEmpty" id=61]
+
+[sub_resource type="StyleBoxEmpty" id=62]
+
+[sub_resource type="StyleBoxEmpty" id=63]
+
+[sub_resource type="Theme" id=88]
+Button/colors/font_color_hover = Color( 0, 0.619608, 1, 1 )
+Button/colors/font_color_pressed = Color( 0, 0.305882, 0.494118, 1 )
+Button/fonts/font = SubResource( 58 )
+Button/styles/disabled = SubResource( 59 )
+Button/styles/focus = SubResource( 60 )
+Button/styles/hover = SubResource( 61 )
+Button/styles/normal = SubResource( 62 )
+Button/styles/pressed = SubResource( 63 )
+
+[sub_resource type="DynamicFont" id=89]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=90]
+
+[sub_resource type="StyleBoxEmpty" id=91]
+
+[sub_resource type="StyleBoxEmpty" id=92]
+
+[sub_resource type="StyleBoxEmpty" id=93]
+
+[sub_resource type="StyleBoxEmpty" id=55]
+
+[sub_resource type="DynamicFont" id=56]
+
+[sub_resource type="Theme" id=94]
+default_font = SubResource( 56 )
+Button/colors/font_color_hover = Color( 0, 0.619608, 1, 1 )
+Button/colors/font_color_pressed = Color( 0, 0.305882, 0.494118, 1 )
+Button/fonts/font = SubResource( 89 )
+Button/styles/disabled = SubResource( 90 )
+Button/styles/focus = SubResource( 91 )
+Button/styles/hover = SubResource( 92 )
+Button/styles/normal = SubResource( 93 )
+Button/styles/pressed = SubResource( 55 )
+
+[sub_resource type="DynamicFont" id=95]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=96]
+
+[sub_resource type="StyleBoxEmpty" id=97]
+
+[sub_resource type="StyleBoxEmpty" id=98]
+
+[sub_resource type="StyleBoxEmpty" id=99]
+
+[sub_resource type="StyleBoxEmpty" id=100]
+
+[sub_resource type="Theme" id=101]
+Button/colors/font_color_hover = Color( 0, 0.619608, 1, 1 )
+Button/colors/font_color_pressed = Color( 0, 0.305882, 0.494118, 1 )
+Button/fonts/font = SubResource( 95 )
+Button/styles/disabled = SubResource( 96 )
+Button/styles/focus = SubResource( 97 )
+Button/styles/hover = SubResource( 98 )
+Button/styles/normal = SubResource( 99 )
+Button/styles/pressed = SubResource( 100 )
+
+[sub_resource type="DynamicFont" id=110]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=102]
+bg_color = Color( 0.172549, 0.172549, 0.172549, 1 )
+
+[sub_resource type="Theme" id=103]
+LineEdit/fonts/font = SubResource( 110 )
+LineEdit/styles/normal = SubResource( 102 )
+
+[sub_resource type="DynamicFont" id=104]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=105]
+
+[sub_resource type="Theme" id=106]
+Label/fonts/font = SubResource( 104 )
+Label/styles/normal = SubResource( 105 )
+
+[sub_resource type="StyleBoxEmpty" id=111]
+
+[sub_resource type="StyleBoxEmpty" id=112]
+
+[sub_resource type="StyleBoxEmpty" id=113]
+
+[sub_resource type="StyleBoxEmpty" id=114]
+
+[sub_resource type="StyleBoxEmpty" id=115]
+
+[sub_resource type="Theme" id=116]
+Button/styles/disabled = SubResource( 111 )
+Button/styles/focus = SubResource( 112 )
+Button/styles/hover = SubResource( 113 )
+Button/styles/normal = SubResource( 114 )
+Button/styles/pressed = SubResource( 115 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 615, -47 )
+script = ExtResource( 2 )
+
+[node name="FundoPacientes" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+stretch_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="FundoPacientes"]
+margin_left = 359.0
+margin_top = 308.0
+margin_right = 1892.0
+margin_bottom = 1075.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FundoPacientes/ScrollContainer"]
+
+[node name="LabelGer5" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -629.0
+margin_top = -73.0
+margin_right = -15.0
+margin_bottom = -9.0
+theme = SubResource( 50 )
+text = "Pressione \"esc\" para voltar"
+
+[node name="LabelGer4" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 546.0
+margin_top = 39.0
+margin_right = 642.0
+margin_bottom = 110.0
+rect_pivot_offset = Vector2( 330, 70 )
+theme = SubResource( 52 )
+text = "Olá,"
+align = 1
+
+[node name="LabelGer6" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 653.0
+margin_top = 39.0
+margin_right = 826.0
+margin_bottom = 110.0
+rect_pivot_offset = Vector2( 330, 70 )
+theme = SubResource( 54 )
+text = "4Bytes"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -122.0
+margin_top = 29.0
+margin_right = -29.0
+margin_bottom = 143.0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[node name="ButtonSetings" type="Button" parent="."]
+margin_left = 70.0
+margin_top = 797.0
+margin_right = 327.0
+margin_bottom = 853.0
+focus_mode = 0
+theme = SubResource( 85 )
+enabled_focus_mode = 0
+text = "Ajustes"
+align = 0
+
+[node name="ButtonFAQ" type="Button" parent="."]
+margin_left = 68.0
+margin_top = 985.0
+margin_right = 325.0
+margin_bottom = 1041.0
+focus_mode = 0
+theme = SubResource( 86 )
+enabled_focus_mode = 0
+text = "F.A.Q "
+align = 0
+
+[node name="ButtonUser" type="Button" parent="."]
+margin_left = 72.0
+margin_top = 655.0
+margin_right = 329.0
+margin_bottom = 711.0
+focus_mode = 0
+theme = SubResource( 87 )
+enabled_focus_mode = 0
+text = "Usuário"
+align = 0
+
+[node name="ButtonAgenda" type="Button" parent="."]
+margin_left = 72.0
+margin_top = 445.0
+margin_right = 327.0
+margin_bottom = 501.0
+focus_mode = 0
+theme = SubResource( 88 )
+enabled_focus_mode = 0
+text = "Agenda"
+align = 0
+
+[node name="ButtonPatients" type="Button" parent="."]
+margin_left = 69.0
+margin_top = 309.0
+margin_right = 324.0
+margin_bottom = 365.0
+focus_mode = 0
+theme = SubResource( 94 )
+enabled_focus_mode = 0
+text = "Pacientes"
+align = 0
+
+[node name="button_create" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -155.0
+margin_top = 156.0
+margin_right = 419.0
+margin_bottom = 302.0
+theme = SubResource( 101 )
+text = "Adicionar Paciente"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -633.0
+margin_top = -376.0
+margin_right = 960.0
+margin_bottom = 548.0
+color = Color( 0.121569, 0.121569, 0.121569, 1 )
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer"]
+margin_left = 525.0
+margin_top = 298.0
+margin_right = 1725.0
+margin_bottom = 374.0
+theme = SubResource( 103 )
+
+[node name="LineEdit2" type="LineEdit" parent="CanvasLayer"]
+margin_left = 525.0
+margin_top = 487.0
+margin_right = 1725.0
+margin_bottom = 563.0
+theme = SubResource( 103 )
+
+[node name="button_add" type="Button" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -44.0
+margin_top = 221.0
+margin_right = 340.0
+margin_bottom = 327.0
+theme = ExtResource( 3 )
+text = "Confirmar"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 519.0
+margin_top = 242.0
+margin_right = 1173.0
+margin_bottom = 298.0
+theme = SubResource( 106 )
+text = "  Digite o nome do novo Paciente"
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+margin_left = 519.0
+margin_top = 428.0
+margin_right = 1173.0
+margin_bottom = 484.0
+theme = SubResource( 106 )
+text = "  Digite a sala do novo Paciente"
+
+[node name="Label3" type="Label" parent="CanvasLayer"]
+margin_left = 916.0
+margin_top = 615.0
+margin_right = 1121.0
+margin_bottom = 671.0
+theme = ExtResource( 5 )
+text = " "
+align = 1
+
+[node name="Label4" type="Label" parent="CanvasLayer"]
+margin_left = 842.0
+margin_top = 615.0
+margin_right = 1047.0
+margin_bottom = 671.0
+theme = ExtResource( 5 )
+text = " "
+align = 1
+
+[node name="buttonexitmakepatient" type="Button" parent="CanvasLayer"]
+margin_left = 992.0
+margin_top = 880.0
+margin_right = 1226.0
+margin_bottom = 951.0
+theme = ExtResource( 3 )
+text = "Voltar"
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer3"]
+margin_left = 329.0
+margin_top = 156.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0.121569, 0.121569, 0.121569, 1 )
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer3/ColorRect"]
+margin_left = 196.0
+margin_top = 139.0
+margin_right = 1396.0
+margin_bottom = 218.0
+theme = ExtResource( 4 )
+
+[node name="LineEdit2" type="LineEdit" parent="CanvasLayer3/ColorRect"]
+margin_left = 196.0
+margin_top = 329.0
+margin_right = 1396.0
+margin_bottom = 408.0
+theme = ExtResource( 4 )
+
+[node name="Buttonconfirmedit" type="Button" parent="CanvasLayer3/ColorRect"]
+margin_left = 604.0
+margin_top = 584.0
+margin_right = 993.0
+margin_bottom = 687.0
+theme = ExtResource( 3 )
+text = "Confirmar Edição"
+
+[node name="buttonexiteditpatient" type="Button" parent="CanvasLayer3/ColorRect"]
+margin_left = 687.0
+margin_top = 704.0
+margin_right = 911.0
+margin_bottom = 776.0
+theme = ExtResource( 3 )
+text = "Voltar"
+
+[node name="Label" type="Label" parent="CanvasLayer3/ColorRect"]
+margin_left = 197.0
+margin_top = 83.0
+margin_right = 851.0
+margin_bottom = 139.0
+theme = SubResource( 106 )
+text = "  Digite um novo nome para este Paciente"
+
+[node name="Label2" type="Label" parent="CanvasLayer3/ColorRect"]
+margin_left = 197.0
+margin_top = 271.0
+margin_right = 1035.0
+margin_bottom = 327.0
+theme = SubResource( 106 )
+text = "  Digite uma nova sala para este Paciente"
+
+[node name="Label4" type="Label" parent="CanvasLayer3/ColorRect"]
+margin_left = 513.0
+margin_top = 459.0
+margin_right = 718.0
+margin_bottom = 515.0
+theme = ExtResource( 5 )
+text = " "
+align = 1
+
+[node name="Label3" type="Label" parent="CanvasLayer3/ColorRect"]
+margin_left = 587.0
+margin_top = 459.0
+margin_right = 792.0
+margin_bottom = 515.0
+theme = ExtResource( 5 )
+text = " "
+align = 1
+
+[node name="Buttonexit" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -641.0
+margin_top = -90.0
+margin_right = 2.0
+theme = SubResource( 116 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -67.5
+margin_top = 14.0
+margin_right = 75.5
+margin_bottom = 70.0
+theme = ExtResource( 8 )
+
+[connection signal="pressed" from="ButtonAgenda" to="." method="_on_ButtonAgenda_pressed"]
+[connection signal="pressed" from="ButtonPatients" to="." method="_on_ButtonPatients_pressed"]
+[connection signal="pressed" from="button_create" to="." method="_on_button_create_pressed"]
+[connection signal="pressed" from="CanvasLayer/button_add" to="." method="_on_button_add_pressed"]
+[connection signal="pressed" from="CanvasLayer/buttonexitmakepatient" to="." method="_on_buttonexitmakepatient_pressed"]
+[connection signal="pressed" from="CanvasLayer3/ColorRect/Buttonconfirmedit" to="." method="_on_Buttonconfirmedit_pressed"]
+[connection signal="pressed" from="CanvasLayer3/ColorRect/buttonexiteditpatient" to="." method="_on_buttonexiteditpatient_pressed"]
+[connection signal="pressed" from="Buttonexit" to="." method="_on_Buttonexit_pressed"]
